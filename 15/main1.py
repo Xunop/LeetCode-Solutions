@@ -5,6 +5,7 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] > 0:
                 return res
+            # skip duplicate
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
             l = i + 1

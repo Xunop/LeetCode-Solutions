@@ -1,0 +1,4 @@
+dfs: index: 当前考虑的数字下标, cur: 当前子集的和, cnt: 当前已经分成的子集数, vis: 记录当前数字是否被使用
+dfs 函数的定义为: 从 index 开始，是否能够找到 k 个和为 target 的子集
+
+主要考虑 `if cur == 0 return false` 这个剪枝。

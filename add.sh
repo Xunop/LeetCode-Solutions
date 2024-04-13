@@ -16,6 +16,7 @@ pattern="main[0-9]*.py"
 files=$(ls $DIR/$solution_name | grep $pattern)
 if [[ -z $files ]]; then
     touch $DIR/$solution_name/main1.py
+    exec $EDITOR $DIR/$solution_name/main1.py
 else
     last_file=$(echo $files | tr " " "\n" | sort -n | tail -n 1)
     last_number=$(echo $last_file | grep -o '[0-9]*')
